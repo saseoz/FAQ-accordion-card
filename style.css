@@ -1,0 +1,119 @@
+
+:root {
+    --clr-lightpink: hsl(275, 100%, 97%);
+    --clr-graypurple: hsl(292, 16%, 49%);
+    --clr-darkpurple: hsl(292, 42%, 14%);
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif; /* 400 600 700 */
+
+    background-color: hsl(277, 90%, 96%);
+    background-image: url('assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    color: var(--clr-darkpurple);
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh;    
+    padding: 1.5em; 
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.card {
+    padding-top: 2em;
+    padding-bottom: 1.688em;
+    padding-inline: 1.5em;
+    background-color: white;
+    border-radius: .8rem;
+    max-width: 600px;
+    width: 100%; 
+    box-shadow: 0px 30px 20px hsla(293, 16%, 49%, 0.24);
+}
+hr {
+    border-color: hsla(252, 33%, 97%, 0.148);
+}
+/* title & icon */
+.title-wrap {
+    gap: 1.688em;
+}
+.title-icon {
+    max-width: 25px;
+}
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+/* question & icon */
+.accordion-el {
+    padding-block: 1.5em;
+}
+.accordion-wrap {
+    justify-content: space-between;
+}
+.question {
+    font-size: 1.063rem;
+    font-weight: 600;
+    width: 90%;
+}
+.question:hover {
+    color: hsl(281, 83%, 54%);
+}
+.question-icon, .question {
+    cursor: pointer;
+}
+/* answer */
+.answer {
+    margin-top: 1em;
+    color: var(--clr-graypurple);
+    line-height: 1.5;
+}
+
+/* hide-show text & icon */
+.answer {
+    display: none;
+}
+.minus-icon {
+    display: none;
+}
+.show .answer {
+    display: block;
+}
+.show .minus-icon {
+    display: inline;
+}
+.show .plus-icon {
+    display: none;
+}
+@media (min-width: 600px) {
+    body {
+        background-image: url('assets/images/background-pattern-desktop.svg');
+    }
+    .card {
+        padding-top: 3.375em;
+        padding-bottom: .7em;
+        padding-inline: 2.5em;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .question {
+        font-size: 1.1rem;
+    }
+    .title-icon {
+        max-width: 38px;
+    }
+}
